@@ -8,14 +8,14 @@ set(inc_files include/window.hpp)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED 20)
+set(CMAKE_CXX_FLAGS "-pedantic -Wall -Wextra")
 
 if(UNIX)
-    set(CMAKE_CXX_FLAGS "-pedantic -Wall -Wextra")
+    # add unix options here
 endif()
 
 if(WIN32)
    set(CMAKE_WIN32_EXECUTABLE ON)
-   set(CMAKE_CXX_FLAGS "-Werror")
 endif()
 
 include(CTest)
